@@ -48,7 +48,7 @@ const speak = () =>{
     if(textInput.value !== ''){
          // Add background animation
         body.style.background = '#141414 url(https://larrysul.github.io/Type-n-speak/img/wave.gif)';
-        body.style.color = 'red';
+        body.style.color = 'black';
         body.style.backgroundRepeat = 'repeat-x';
         body.style.backgroundSize = '100% 100%';
         // Get speak text
@@ -57,6 +57,7 @@ const speak = () =>{
         // Speak end
         speakText.onend = e => {
             body.style.background = '#141414';
+            body.style.color = 'black';
             console.log('Done speaking....');
         }
 
