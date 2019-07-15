@@ -7,8 +7,6 @@ const textInput = document.querySelector('#text-input');
 const voiceSelect = document.querySelector('#voice-select');
 const rate = document.querySelector('#rate');
 const rateValue = document.querySelector('#rate-value');
-const pitch = document.querySelector('#pitch');
-const pitchValue = document.querySelector('#pitch-value');
 const body = document.querySelector('body');
 
 
@@ -50,7 +48,7 @@ const speak = () =>{
 
     if(textInput.value !== ''){
          // Add background animation
-        body.style.background = '#141414 url(../img/wave.gif)';
+        body.style.background = '#141414 url(https://larrysul.github.io/Type-n-speak/img/wave.gif)';
         body.style.backgroundRepeat = 'repeat-x';
         body.style.backgroundSize = '100% 100%';
         // Get speak text
@@ -79,7 +77,6 @@ const speak = () =>{
 
         // Set pitch and rate
         speakText.rate = rate.value;
-        speakText.pitch = pitch.value;
 
         // Speak
         synth.speak(speakText);
@@ -100,8 +97,6 @@ textForm.addEventListener('submit', e => {
 // Rate value change
 rate.addEventListener('change', e=> (rateValue.textContent = rate.value));
 
-// Rate value change
-pitch.addEventListener('change', e=> (pitchValue.textContent = pitch.value));
 
 // voice select change
 voiceSelect.addEventListener('change', e=> speak());
