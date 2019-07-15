@@ -9,7 +9,6 @@ const rate = document.querySelector('#rate');
 const rateValue = document.querySelector('#rate-value');
 const body = document.querySelector('body');
 
-
 // Init voice array
 let voices = [];
 
@@ -80,13 +79,8 @@ const speak = () =>{
 
         // Speak
         synth.speak(speakText);
-
     }
 }
-
-
-// Event Listeners
-
 // text form submit
 textForm.addEventListener('submit', e => {
     e.preventDefault();
@@ -96,7 +90,6 @@ textForm.addEventListener('submit', e => {
 
 // Rate value change
 rate.addEventListener('change', e=> (rateValue.textContent = rate.value));
-
 
 // voice select change
 voiceSelect.addEventListener('change', e=> speak());
